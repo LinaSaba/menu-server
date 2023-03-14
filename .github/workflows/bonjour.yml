@@ -27,3 +27,7 @@ jobs:
           java-version: 17.0.6
       - run: mvn -v
       - run: mvn compile
+      - run: ls -ltra ./target
+      - run: mvn package
+      - run: ls -ltra ./target
+    
