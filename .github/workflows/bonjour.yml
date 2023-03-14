@@ -16,4 +16,4 @@ jobs:
       - name: output the message on actions result
         uses: Code-Hex/neo-cowsay-action@v1
         with:
-          message: ${{ steps.package.outputs.content }}
+          message: ${{ steps.readme.outputs.content }}
