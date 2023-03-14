@@ -26,3 +26,4 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: 17.0.6
       - run: mvn -v
+      - run: mvn compile
