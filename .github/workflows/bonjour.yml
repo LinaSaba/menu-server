@@ -17,3 +17,13 @@ jobs:
         uses: Code-Hex/neo-cowsay-action@v1
         with:
           message: ${{ steps.readme.outputs.content }}
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.6
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17.0.6'
+      - run: java HelloWorldApp.java
