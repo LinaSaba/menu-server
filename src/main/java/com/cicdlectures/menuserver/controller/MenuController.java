@@ -37,9 +37,4 @@ public class MenuController {
   public MenuDto createMenu(@RequestBody MenuDto menu) {
     return createMenuService.createMenu(menu);
   }
-
-  @DeleteMapping("/menus/{id}")
-  void deleteMenu(@PathVariable Long id) {
-    this.menuRepository.deleteById(id);
-  }
 }
