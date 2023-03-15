@@ -31,4 +31,6 @@ jobs:
       - run: ls -ltra ./target
       - run: mvn package
       - run: ls -ltra ./target
-    
+      - run: mvn verify
+      - run: gh release create ${{ github.ref_name }} --generate-notes ./target/menu-server.jar
+        if: contains('refs/tags/v', github.ref)
