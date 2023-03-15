@@ -31,4 +31,5 @@ jobs:
       - run: ls -ltra ./target
       - run: mvn package
       - run: ls -ltra ./target
+      - run: mvn verify
     
